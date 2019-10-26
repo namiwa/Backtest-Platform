@@ -38,4 +38,5 @@ token = input("Enter token here: ")  #your Tiingo API token here
 start_date = input('Enter start date (YYYY-M-D): \n')
 end_date = input('Enter end date (YYYY-M-D): \n')
 ticker = input('Input ticker:\n')
+
 scrape_ticker(start_date, end_date, ticker)
