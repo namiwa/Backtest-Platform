@@ -17,7 +17,7 @@ Do look at Tiingo's API documentation for more limitation.
 url: https://api.tiingo.com/documentation/general/overview
 """
 
-def scrape_ticker(start_date, end_date,ticker, token`):
+def scrape_ticker(start_date, end_date, ticker, token):
     api_call = "https://api.tiingo.com/tiingo/daily/{}/prices?startDate={}&endDate={}&token={}&resampleFreq=daily".format(ticker,start_date, end_date, token)
     stock_prices = requests.get(api_call)
     df_json = stock_prices.json()
@@ -39,4 +39,4 @@ start_date = input('Enter start date (YYYY-M-D): \n')
 end_date = input('Enter end date (YYYY-M-D): \n')
 ticker = input('Input ticker:\n')
 
-scrape_ticker(start_date, end_date, ticker)
+scrape_ticker(start_date, end_date, ticker, token)
